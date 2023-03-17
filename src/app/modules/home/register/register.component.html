@@ -1,0 +1,26 @@
+<div class="form-card flex flex-col items-center px-20 justify-center bg-whitebg">
+    <img src="../../../../assets/imgs/register-vector.svg" alt="um enorme celular e uma pessoa ao lado">
+    <div class="flex flex-col items-start w-full mt-6">
+        <h1 class="text-4xl text-bluedark">Cadastre-se</h1>
+        <p class="text-graydark mt-2">Preencha todos os campos.</p>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="imprime()" class="flex flex-col mt-9 min-w-full">
+        <div>
+            <input formControlName="email" type="email" placeholder="E-mail" class="primary-input">
+        </div>
+        <div class="mt-5">
+            <input formControlName="password" type="password" placeholder="Senha" class="primary-input">
+        </div>
+        <div class="mt-5">
+            <input formControlName="repeatPassword" type="password" placeholder="Repita sua senha" class="primary-input">
+        </div>
+        <app-primary-button 
+            text="Cadastrar" 
+            size="h-12" 
+            class="mt-5" 
+            [disabled]="registerForm.invalid || registerForm.get('password')?.value !== registerForm.get('repeatPassword')?.value">
+        </app-primary-button>
+    </form>
+    <small class="mt-5">Já tem uma conta?</small>
+    <a class="mt-2 text-primary text-sm font-medium hover:underline" routerLink="">Entrar</a>
+</div>
