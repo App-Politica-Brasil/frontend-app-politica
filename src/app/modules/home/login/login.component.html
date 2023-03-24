@@ -1,0 +1,43 @@
+<div class="form-card flex flex-col justify-center items-center bg-whitebg px-20">
+    <img src="../../../../assets/imgs/login-vector.svg" alt="">
+    <div class="flex flex-col items-start w-full mt-6">
+        <h1 class="text-3xl text-bluedark">Olá! Acesse sua conta</h1>
+        <p class="text-graydark mt-2">Forneça as informações para continuar.</p>
+    </div>
+    <form [formGroup]="profileForm" (ngSubmit)="teste()" class="flex flex-col mt-9 min-w-full">
+        <div>
+            <input 
+                type="email"
+                class="primary-input"
+                placeholder="E-mail"
+                formControlName="email"
+            >
+        </div>
+        <div class="mt-5">
+            <div class="flex items-center bg-whitebg relative">
+                <input 
+                    type="password" 
+                    class="p-4 pr-8 bg-whitebg w-full outline-none border border-primary rounded-xl placeholder:text-gray h-14"
+                    placeholder="Senha"
+                    formControlName="password"
+                >
+                <mat-icon color="primary" id="icon" class="absolute right-2 cursor-pointer">remove_red_eye</mat-icon>
+            </div>
+        </div>
+        <div class="flex justify-between items-center">
+            <mat-checkbox color="primary" class="relative -left-2">
+                <span class="text-primary text-sm">Lembre de mim</span>
+            </mat-checkbox>
+            <a routerLink="esqueceu-a-senha" class="text-primary text-sm font-semibold hover:underline">Esqueci minha senha</a>
+        </div>
+        <app-primary-button 
+            text="Entrar" 
+            size="h-12" 
+            [disabled]="profileForm.invalid" 
+            class="mt-9">
+            <img src="../../../../assets/imgs/signin-icon.svg" alt="">
+        </app-primary-button>
+    </form>
+    <small class="mt-5">Não tem conta?</small>
+    <a routerLink="cadastrar" class="mt-2 text-primary text-sm font-medium hover:underline">Cadastrar</a>
+</div>

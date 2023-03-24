@@ -1,0 +1,31 @@
+.form-card {
+    width: 640px;
+    min-height: 95vh;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+
+@media screen and (max-width: 658px) {
+    .form-card {
+        width: 96vw;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .form-card {
+        padding: 0 1.5rem 0 1.5rem !important;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+    
+    h1 {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+    }
+
+    input {
+        height: 3rem !important;
+    }
+}

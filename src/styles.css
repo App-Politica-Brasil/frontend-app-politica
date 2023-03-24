@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
+
+@layer components {
+    .primary-input {
+        @apply h-14 p-4 w-full border border-primary rounded-xl placeholder:text-gray bg-whitebg outline-none
+    }
+}
