@@ -7,6 +7,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif}
 
 @layer components {
     .primary-input {
-        @apply h-14 p-4 w-full border border-primary rounded-xl placeholder:text-gray bg-whitebg
+        @apply h-14 p-4 w-full border border-primary rounded-xl placeholder:text-gray bg-whitebg outline-none
     }
 }
