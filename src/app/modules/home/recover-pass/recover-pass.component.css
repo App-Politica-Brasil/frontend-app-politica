@@ -18,9 +18,17 @@
 
 @media screen and (max-width: 480px){
     .form-card {
-        padding: 1.5rem 2rem 1.5rem 2rem !important;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem !important;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
     }
+    
     .head-img {
         max-width: 100%;
+    }
+
+    input {
+        height: 3rem !important;
     }
 }

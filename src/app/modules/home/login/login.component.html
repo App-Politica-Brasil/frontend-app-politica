@@ -14,12 +14,15 @@
             >
         </div>
         <div class="mt-5">
-            <input 
-                type="password" 
-                class="primary-input"
-                placeholder="Senha"
-                formControlName="password"
-            >
+            <div class="flex items-center bg-whitebg relative">
+                <input 
+                    type="password" 
+                    class="p-4 pr-8 bg-whitebg w-full outline-none border border-primary rounded-xl placeholder:text-gray h-14"
+                    placeholder="Senha"
+                    formControlName="password"
+                >
+                <mat-icon color="primary" id="icon" class="absolute right-2 cursor-pointer">remove_red_eye</mat-icon>
+            </div>
         </div>
         <div class="flex justify-between items-center">
             <mat-checkbox color="primary" class="relative -left-2">
