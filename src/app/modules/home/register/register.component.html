@@ -15,8 +15,9 @@
                     type="password" 
                     placeholder="Senha" 
                     class="p-4 pr-8 bg-whitebg w-full outline-none placeholder:text-gray border border-primary rounded-xl h-14"
+                    #passinput
                 >
-                <mat-icon color="primary" class="icon absolute right-2">remove_red_eye</mat-icon>
+                <mat-icon (click)="toggleVisibility(passinput)" color="primary" class="icon absolute right-2 cursor-pointer">remove_red_eye</mat-icon>
             </div>
         </div>
         <div class="mt-5">
@@ -26,8 +27,9 @@
                     type="password" 
                     placeholder="Repita sua senha" 
                     class="p-4 pr-8 bg-whitebg w-full outline-none placeholder:text-gray border border-primary rounded-xl h-14"
+                    #repeatpassinput
                 >
-                <mat-icon color="primary" class="icon absolute right-2">remove_red_eye</mat-icon>
+                <mat-icon (click)="toggleVisibility(repeatpassinput)" color="primary" class="icon absolute right-2 cursor-pointer">remove_red_eye</mat-icon>
             </div>
         </div>
         <app-primary-button 
