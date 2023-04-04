@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,11 +8,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
   profileForm!: FormGroup
+  @ViewChild("passinput") passinput!: any
 
   constructor(private fb: FormBuilder) {}
 
   teste() {
     alert("você logou no melhor app do brasil")
+  }
+
+  toggleVisibility(element: HTMLInputElement) {
+    element.type === "password" ? element.type = "text" : element.type = "password";
   }
 
   ngOnInit(): void {

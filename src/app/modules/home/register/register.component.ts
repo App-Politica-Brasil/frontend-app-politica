@@ -11,9 +11,12 @@ export class RegisterComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  public imprime() {
+  imprime() {
     alert("voce se registrou no site mais brabo que tem")
-    
+  }
+
+  toggleVisibility(element: HTMLInputElement) {
+    element.type == "password" ? element.type = "text" : element.type = "password";
   }
 
   ngOnInit() {
