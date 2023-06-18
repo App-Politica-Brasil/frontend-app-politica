@@ -4,8 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from "@angular/material/icon";
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { AuthRoutingModule } from './auth-routing.module';
+import { AuthComponent } from './auth.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PrimaryButtonModule } from 'src/app/shared/components/primary-button/primary-button.module';
@@ -14,18 +14,18 @@ import { RecoverPassComponent } from './recover-pass/recover-pass.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    AuthComponent,
     RegisterComponent,
     LoginComponent,
     RecoverPassComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    AuthRoutingModule,
     PrimaryButtonModule,
     ReactiveFormsModule,
     MatCheckboxModule,
     MatIconModule
   ]
 })
-export class HomeModule { }
+export class AuthModule { }
