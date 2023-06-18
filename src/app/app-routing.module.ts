@@ -5,7 +5,7 @@ const routes: Routes = [
   {path : "", redirectTo : "conta", pathMatch : "full"},
   {
     path : "conta",
-    loadChildren : () => import("./modules/home/home.module").then(mod => mod.HomeModule)
+    loadChildren : () => import("./modules/auth/auth.module").then(mod => mod.AuthModule)
   }
 ];
 

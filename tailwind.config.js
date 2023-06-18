@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/app/modules/home/register/register.component.html",
-    "./src/app/modules/home/login/login.component.html",
-    "./src/app/modules/home/recover-pass/recover-pass.component.html",
-    "./src/app/modules/home/home.component.html",
+    "./src/app/modules/auth/register/register.component.html",
+    "./src/app/modules/auth/login/login.component.html",
+    "./src/app/modules/auth/recover-pass/recover-pass.component.html",
+    "./src/app/modules/auth/auth.component.html",
     "./src/app/shared/components/primary-button/primary-button.component.html"
   ],
   theme: {
