@@ -1,0 +1,110 @@
+<aside
+  *ngIf="sidebarStatus | async as status"
+  class='bg-graydark fixed top-0 w-full lg:w-96 min-h-full transition-all duration-500 shadow-lg shadow-zinc-900/70 z-10'
+  [ngClass]="status === 'opened' ? '-translate-x-0': '-translate-x-full shadow-none'"
+>
+  <div class="flex flex-col p-4 lg:p-0 relative">
+    <button>
+      <svg (click)="closeSidebar()" class="absolute right-4 w-8 top-2 text-zinc-300 hover:text-white transition ease-linear 1s"xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+    </button>
+    <div class="flex flex-col mt-3">
+      <div>
+        <img 
+          src="https://images.mubicdn.net/images/cast_member/2552/cache-207-1524922850/image-w856.jpg?size=800x" 
+          alt="brad pitt"
+          class="rounded-full w-32 block mx-auto lg:w-12"
+        >
+      </div>
+      <div>
+        <p class="text-center font-medium mt-3 text-xl text-white">Bem vindo Willian!</p>
+      </div>
+    </div>
+    <div class="mt-8">
+      <nav class="px-9 lg:px-0">
+        <ul class="overflow-hidden whitespace-nowrap">
+          <li class="mb-2">
+            <a routerLink="/" class="group" (click)="closeSidebar()">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Inicio</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="" class="group">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5T731-360q31 14 50 41t19 65v94H160Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Meu Perfil</span>
+            </a>
+          </li>
+          <li class="mb-2 group">
+            <a href="">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M212-241v-339h60v339h-60Zm242 0v-339h60v339h-60ZM80-640v-53l400-228 400 228v53H80Zm0 519v-60h500q2 14 3.5 28.5T591-121H80Zm608-291v-168h60v138l-60 30ZM800 0q-69-17-114.5-79.5T640-218v-102l160-80 160 80v102q0 76-45.5 138.5T800 0Zm-21-120 142-142-28-28-114 114-59-59-28 28 87 87Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Congresso</span>
+            </a>
+          </li>
+          <li class="mb-2 group">
+            <a href="">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M480-400q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240ZM180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Calendário</span>
+            </a>
+          </li>
+          <li class="mb-2 group">
+            <a routerLink="deputados" (click)="closeSidebar()">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M0-240v-53q0-38.567 41.5-62.784Q83-380 150.376-380q12.165 0 23.395.5Q185-379 196-377.348q-8 17.348-12 35.165T180-305v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-19.861-3.5-37.431Q773-360 765-377.273q11-1.727 22.171-2.227 11.172-.5 22.829-.5 67.5 0 108.75 23.768T960-293v53H780ZM149.567-410Q121-410 100.5-430.562 80-451.125 80-480q0-29 20.562-49.5Q121.125-550 150-550q29 0 49.5 20.5t20.5 49.933Q220-451 199.5-430.5T149.567-410Zm660 0Q781-410 760.5-430.562 740-451.125 740-480q0-29 20.562-49.5Q781.125-550 810-550q29 0 49.5 20.5t20.5 49.933Q880-451 859.5-430.5T809.567-410ZM480-480q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Deputados</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</aside>
+
+<!-- <aside 
+  class='bg-graydark fixed w-full min-h-full lg:w-20 lg:hover:w-52 lg:shadow-md lg:shadow-black transition-all duration-500'
+  [ngClass]="isSidebarOpen ? '-translate-x-0' : '-translate-x-full' "
+>
+  <div class="tt flex flex-col p-4 lg:p-0 relative">
+    <img src="../../../../../assets/imgs/close-icon.svg" alt="close" class="absolute right-0 w-8 mr-4 lg:hidden" (click)="handle()">
+    <div class="flex flex-col mt-3">
+      <div>
+        <img 
+          src="https://images.mubicdn.net/images/cast_member/2552/cache-207-1524922850/image-w856.jpg?size=800x" 
+          alt="brad pitt"
+          class="rounded-full w-32 block mx-auto lg:w-12"
+        >
+      </div> -->
+      <!-- <div>
+        <p class="text-center font-medium mt-3 text-xl">Bem vindo Gabriel!</p>
+      </div> -->
+    <!-- </div>
+    <div class="mt-8">
+      <nav class="px-9 lg:px-0">
+        <ul class="overflow-hidden whitespace-nowrap">
+          <li class="mb-2">
+            <a href="" class="group">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear 1s" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear 1s">Inicio</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="" class="group">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear 1s" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5T731-360q31 14 50 41t19 65v94H160Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear 1s">Meu Perfil</span>
+            </a>
+          </li>
+          <li class="mb-2 group">
+            <a href="">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M212-241v-339h60v339h-60Zm242 0v-339h60v339h-60ZM80-640v-53l400-228 400 228v53H80Zm0 519v-60h500q2 14 3.5 28.5T591-121H80Zm608-291v-168h60v138l-60 30ZM800 0q-69-17-114.5-79.5T640-218v-102l160-80 160 80v102q0 76-45.5 138.5T800 0Zm-21-120 142-142-28-28-114 114-59-59-28 28 87 87Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Congresso</span>
+            </a>
+          </li>
+          <li class="mb-2 group">
+            <a href="">
+              <svg class="w-11 relative left-4 top-3 text-zinc-300 group-hover:text-white transition ease-linear" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path fill="currentColor" d="M480-400q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240ZM180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Z"/></svg>
+              <span class="font-thin text-xl text-zinc-300 relative block bottom-6 pl-6 ml-16 group-hover:text-white transition ease-linear">Calendário</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</aside> -->
