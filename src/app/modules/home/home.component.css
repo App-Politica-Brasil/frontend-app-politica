@@ -1,0 +1,8 @@
+.overlay {
+  /* background-image: url(../../../assets/imgs/urna-background.jpg); */
+  background-color: #ebf5f0;
+  /* filter: brightness(30%); */
+  /* height: calc(100vh - 80px); */
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
